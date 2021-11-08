@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>First Custom PC?</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#miniholder').hide();
+            $('#comps').mouseenter(function() {
+                $('#miniholder').slideDown(77);
+            });
+            $('#comps').mouseleave(function() {
+                $('#miniholder').slideUp(77);
+            });
+            $('.mbutt').mouseenter(function() {
+                $(this).animate({
+                    fontSize: "1.5vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('.mbutt').mouseleave(function() {
+                $(this).animate({
+                    fontSize: "1.2vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('.minibutt').mouseenter(function() {
+                $(this).animate({
+                    fontSize: "1vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('.minibutt').mouseleave(function() {
+                $(this).animate({
+                    fontSize: "0.8vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('#logob').mouseenter(function() {
+                $('#logof').addClass('rotatef');
+            });
+            $('#logob').mouseleave(function() {
+                $('#logof').removeClass('rotatef');
+            });
+            $('.minibutt').click(function(e) {
+                e.preventDefault();
+                target = $( $(this).attr('href') ).position().top;
+                $('html,body').stop().animate({ scrollTop: target }, { duration: 500});
+            });
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+    </style>
+</head>
+<body>
+    <div id="main" class="clearfix">
+        <div id="content">
+            <section class="page" id="cpup">
+                <br><br>
+                <h1>Regarding the CPU...</h1>
+                <br>
+                <br>
+                <img src="images/cpupic.jpg" alt="cpu">
+                <br>
+                <p>Being the “heart” of the system, the CPU should definitely be one of your biggest considerations when budgeting. For productivity purposes, CPU is often matters more than the GPU for performance. The CPU market is essentially a duopoly between Intel and AMD – since the release of AMD’s Ryzen line of CPUs, the two companies have been very competitive. Certain workloads may benefit either company’s chips more, but for the most part both companies have some excellent options so it’s not necessarily to think of either being better than the other.</p>
+            </section>
+            <section class="page" id="ramp">
+                <br><br>
+                <h1>Regarding the RAM...</h1>
+                <br>
+                <br>
+                <img src="images/rampic.jpg" alt="psu">
+                <br>
+                <p>Unless there is some specific software with high ram usage you’d like to run, <b>16GB is the sweet spot for the majority of people.</b> Some examples would be huge Photoshop files, or video editing projects with high resolutions. Otherwise, 16GB will have no trouble running 99.9% of games, even with chrome tabs in the background. Don’t overspend on RAM of high frequency – 3200Mhz is a good baseline, and higher frequencies will usually net diminishing returns.</p>
+            </section>
+            <section class="page" id="gpup">
+                <br><br>
+                <h1>Regarding the GPU...</h1>
+                <br>
+                <br>
+                <img src="images/gpupic.jpg" alt="psu">
+                <br>
+                <p>A second “heart” of the system(?) If you’re considering gaming as a use case of your system, then the GPU may be the most important component to budget for. Games with fancier graphics will need a more powerful GPU to run. If you’re running a higher resolution or high refresh-rate monitor that will be some extra load you need to plan for. The best way to decide whether a specific GPU is powerful enough is to <b>watch a CPU/GPU pair benchmark video on YouTube</b> – pay attention to the GPU and CPU loads and check for bottlenecks.</p>
+            </section>
+            <section class="page" id="psup">
+                <br><br>
+                <h1>Regarding the PSU...</h1>
+                <br>
+                <br>
+                <img src="images/psupic.jpg" alt="psu">
+                <br>
+                <p><b>Don’t think you can save money by purchasing a no-brand cheapo PSU!</b> There is a possibility it could explode and take out your entire PC with it – and even if it’s not something that drastic, these no-name PSUs will often last much less than a reputable brand’s alternative, and often exaggerate their max loads. Some extra headroom is nice in a PSU with higher capacity for future upgrades, but don’t overdo it if there is still room for extra budget in other components. Additionally, a modular PSU will make cable management much easier.</p>
+            </section>
+            <section class="page" id="mbp">
+                <br><br>
+                <h1>Regarding the MoBo...</h1>
+                <br>
+                <br>
+                <img src="images/mbpic.jpg" alt="psu">
+                <br>
+                <p><b>This is the component I see the most people overspend on.</b> Unless you want to spend extra money just for the aesthetics, there is often little reason to go for higher end motherboards. I’d recommend just picking the motherboard that has the minimum amount of features you are looking for, such as USB ports and fan headers. 4 RAM slots is something you should look out for, as it leaves you the option of upgrading a 2stick configuration without replacing your previous sticks. One thing to watch out on budget motherboards is the power limits – sometimes they can limit the performance of higher end CPUs. (Specifically, in 10th gen Intel CPUs)</p>
+            </section>
+        </div>
+        <nav>
+            <div id="logobox">
+                <a href="index.html">
+                    <img src="images/innerfan2.png" alt="logo" id="logof" class="rotate">
+                    <img src="images/outerfan2.png" alt="logo2" id="logob">
+                </a>
+            </div>
+            <div id="comps">
+                <a href="parts.html" class="mbutt">Configure</a>
+                <div id="miniholder">
+                    <a href="#cpup" class="minibutt">CPU</a><br>
+                    <a href="#ramp" class="minibutt">RAM</a><br>
+                    <a href="#gpup" class="minibutt">GPU</a><br>
+                    <a href="#psup" class="minibutt">PSU</a><br>
+                    <a href="#mbp" class="minibutt">MoB</a>
+                </div>
+            </div>
+            <a href="negotiate.html" class="mbutt">Negotiate</a>
+            <br>
+            <a href="construct.html" class="mbutt">Construct</a>
+            <br><br><br><br><br><br>
+        </nav>
+    </div>
+</body>
+</html>

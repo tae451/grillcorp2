@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>First Custom PC?</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#miniholder').hide();
+            $('#comps').mouseenter(function() {
+                $('#miniholder').slideDown(77);
+            });
+            $('#comps').mouseleave(function() {
+                $('#miniholder').slideUp(77);
+            });
+            $('.mbutt').mouseenter(function() {
+                $(this).animate({
+                    fontSize: "1.5vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('.mbutt').mouseleave(function() {
+                $(this).animate({
+                    fontSize: "1.2vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('.minibutt').mouseenter(function() {
+                $(this).animate({
+                    fontSize: "1vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('.minibutt').mouseleave(function() {
+                $(this).animate({
+                    fontSize: "0.8vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('#logob').mouseenter(function() {
+                $('#logof').addClass('rotatef');
+            });
+            $('#logob').mouseleave(function() {
+                $('#logof').removeClass('rotatef');
+            });
+            $('#s2').hide();
+            $('#s3').hide();
+            $('#m2').hide();
+            $('#m3').hide();
+            $('#m4').hide();
+            $('#s1').click(function() {
+                $('#m2').slideDown();
+                $('#s1').hide();
+                $('#s2').show();
+            });
+            $('#s2').click(function() {
+                $('#m3').slideDown();
+                $('#s2').hide();
+                $('#s3').show();
+            });
+            $('#s3').click(function() {
+                $('#m4').slideDown();
+                $('#s3').hide();
+            });
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+    </style>
+</head>
+<body>
+    <div id="main" class="clearfix">
+        <div id="content">
+            <section class="page" id="nego1p">
+                <br><br>
+                <h1>Regarding purchases...</h1>
+                <br>
+                <br>
+                <img src="images/delivery.jpg" alt="cpu">
+                <br>
+                <p>After you’ve picked out your parts, you can finally start collecting your components. There are 2 major paths you can go down in this step: used vs new. The main advantages are obvious – with new parts, you get better support and reliability, and with used parts you get much better performance for money. </p>
+                <p>When buying new, I personally like to slowly collect my parts over many weeks – this gives the best opportunities for finding deals. The website <a href="https://www.ozbargain.com.au/" target="_blank">OzBargain</a> is extremely useful for this. Also take into consideration how good a specific store’s service and return policies are, if a product on Amazon is not much more expensive than other stores, I will often buy it just for the no-questions-asked returns. Between computer stores, component prices are often very similar. Often it’s more worth it to just buy all your parts from a single store to save on shipping costs.</p>
+            </section>
+            <section class="page" id="nego2p">
+                <section id="half1">
+                    <br><br><br><br><br><br><br><br><br><br><br>
+                    <p>The components I’d call most worth buying used are the CPU, case and motherboard. Other parts don’t provide much extra value for buying used, or are risker pickups due to possibilities of failing after years of usage. A used GPU is a component that can provide incredible value, but is also one of the riskiest ones to buy. It is one of the more expensive parts of the system, and also the one with most moving parts (in the fans). </p>
+                    <p>The main used markets in Australia that I know of are eBay, Gumtree and Facebook Marketplace. eBay is the most convenient and safest to buy from, but also the most expensive by far. Consider the possibility of haggling prices! Users on Gumtree more often price their listings a big higher than they actually expect due to this expectation. </p>
+                </section>
+                <div id="phonecontainer">
+                    <br><br><br><br><br>
+                    <img src="images/iphonething.png" id="phone" alt="it's a phone.">
+                    <div id="messageholder">
+                       <p class="smessages" id="m1">Hi, you're interested in the card?</p>
+                       <p class="fmessages" id="m2">Yeah, I'd like to make an offer</p>
+                       <p class="fmessages" id="m3">Would you take $220 for it?</p>
+                       <p class="smessages" id="m4">Hmm, sounds good. When are you available for pickup?</p>
+                    </div>
+                    <div id="sendholder">
+                        <p class="fmessages readytosend" id="s1">Yeah, I'd like to make an offer</p>
+                        <p class="fmessages readytosend" id="s2">Would you take $220 for it?</p>
+                        <p class="fmessages readytosend" id="s3">(Wait for a reply)</p>
+                     </div>
+                </div>
+            </section>
+        </div>
+        <nav>
+            <div id="logobox">
+                <a href="index.html">
+                    <img src="images/innerfan2.png" alt="logo" id="logof" class="rotate">
+                    <img src="images/outerfan2.png" alt="logo2" id="logob">
+                </a>
+            </div>
+            <div id="comps">
+                <a href="parts.html" class="mbutt">Configure</a>
+                <div id="miniholder">
+                    <a href="parts.html#cpup" class="minibutt">CPU</a><br>
+                    <a href="parts.html#ramp" class="minibutt">RAM</a><br>
+                    <a href="parts.html#gpup" class="minibutt">GPU</a><br>
+                    <a href="parts.html#psup" class="minibutt">PSU</a><br>
+                    <a href="parts.html#mbp" class="minibutt">MoB</a>
+                </div>
+            </div>
+            <a href="negotiate.html" class="mbutt">Negotiate</a>
+            <br>
+            <a href="construct.html" class="mbutt">Construct</a>
+            <br><br><br><br><br><br>
+        </nav>
+    </div>
+</body>
+</html>

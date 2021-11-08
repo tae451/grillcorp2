@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>First Custom PC?</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#miniholder').hide();
+            $('#comps').mouseenter(function() {
+                $('#miniholder').slideDown(77);
+            });
+            $('#comps').mouseleave(function() {
+                $('#miniholder').slideUp(77);
+            });
+            $('.mbutt').mouseenter(function() {
+                $(this).animate({
+                    fontSize: "1.5vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('.mbutt').mouseleave(function() {
+                $(this).animate({
+                    fontSize: "1.2vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('.minibutt').mouseenter(function() {
+                $(this).animate({
+                    fontSize: "1vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('.minibutt').mouseleave(function() {
+                $(this).animate({
+                    fontSize: "0.8vw"
+                }, {
+                    duration: 80
+                });
+            });
+            $('#logob').mouseenter(function() {
+                $('#logof').addClass('rotatef');
+            });
+            $('#logob').mouseleave(function() {
+                $('#logof').removeClass('rotatef');
+            });
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+    </style>
+</head>
+<body>
+    <div id="main" class="clearfix">
+        <div id="content">
+            <section class="page" id="cpup">
+                <br><br>
+                <h1>Regarding Assembly...</h1>
+                <br>
+                <br>
+                <video autoplay loop muted>
+                    <source src="videos/buildinprogress.mp4">
+                    <p>Your browser doesn’t support HTML5. Please upgrade.</p>
+                </video>
+                <br>
+                <p>Assembly is simpler than people usually expect, but there are still a few pitfalls you should watch out for. The proprietary connectors that come with some components (usually RGB related) aren’t always as robust as the standard connectors, and may be possible to plug them into the wrong places and short something. Cable management is optional, but make sure no cable is floating near any moving parts. Make sure the airflow directions make sense – keep in mind that warm air rises!</p>
+            </section>
+        </div>
+        <nav>
+            <div id="logobox">
+                <a href="index.html">
+                    <img src="images/innerfan2.png" alt="logo" id="logof" class="rotate">
+                    <img src="images/outerfan2.png" alt="logo2" id="logob">
+                </a>
+            </div>
+            <div id="comps">
+                <a href="parts.html" class="mbutt">Configure</a>
+                <div id="miniholder">
+                    <a href="#cpup" class="minibutt">CPU</a><br>
+                    <a href="#ramp" class="minibutt">RAM</a><br>
+                    <a href="#gpup" class="minibutt">GPU</a><br>
+                    <a href="#psup" class="minibutt">PSU</a><br>
+                    <a href="#mbp" class="minibutt">MoB</a>
+                </div>
+            </div>
+            <a href="negotiate.html" class="mbutt">Negotiate</a>
+            <br>
+            <a href="www.google.com" class="mbutt">Construct</a>
+            <br><br><br><br><br><br>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+body {
+	font-family:'Trebuchet MS', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0px;
+}
+#main {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 70%;
+	padding: 0px;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+#content {
+	width: 80%;
+	float: right;
+}
+#content img {
+	width: 80vh;
+	border-radius: 1%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+#content video {
+	width: 80vh;
+	border-radius: 1%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+#content p {
+	width: 77vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+nav {
+	height: auto;
+	border-width: 0px 0px 0px 5px;
+	border-style: solid;
+	border-color: #6666DD;
+	padding: 30px;
+	float: left;
+	position: sticky;
+	top: 0;
+	font-family: 'Montserrat', 'Verdana', sans-serif;
+}
+.mbutt {
+	color: #6666DD;
+	text-decoration: none;
+	font-size: 1.2vw;
+}
+.minibutt {
+	color: #88ff;
+	text-decoration: none;
+	font-size: 0.8vw;
+}
+#logof {
+	position:absolute;
+	width: 2.2vw;
+}
+#logob {
+	position:relative;
+	width: 2.2vw;
+}
+.rotate {
+    animation:spin 4s linear infinite;
+}
+.rotatef {
+    animation:spin 1s linear infinite;
+}
+.beat {
+	animation:  beat 0.5s 1;
+}
+@keyframes spin { 
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+@keyframes beat {
+	0% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+	60% {
+	  transform: scale(1.05);
+	  opacity: 0.8;
+	}
+	100% {
+	  transform: scale(1);
+	}
+}
+.page {
+	height: 100vh;
+	padding: 0px;
+	padding: 0px 30px 0px 30px;
+	font-size: 08;
+	background-color: #e6e3ff;
+	color: #352f2f;
+}
+#content h1{
+	margin: 0px;
+	text-align: center;
+	font-size: 4vh;
+	font-family: 'Montserrat', 'Verdana', sans-serif;
+	color:#8d45a3;
+}
+
+
+#paged {
+	color: rgb(63, 29, 94);
+	background-color: rgba(255, 199, 255, 0.781);
+	position: fixed;
+	right: 10%;
+	bottom: 45%;
+	border-radius:4%;
+}
+body#landing {
+	background-image: url(images/landingbg.jpg);
+	background-color: black;
+	background-repeat: round;
+	background-size: 100vw 100vh;
+}
+div#paged {
+	padding: 20px;
+	max-width: 30%;
+	font-size: 0.83vw
+}
+#enterb {
+	color: whitesmoke;
+	font-size: 3vw;
+	position: fixed;
+	right: 12%;
+	bottom: 35%;
+	text-decoration: none;
+	font-family: 'Montserrat', 'Verdana', sans-serif;
+}
+#topbanner {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	size: 0.7vw;
+	padding-left: 50px;
+	position:fixed;
+	font-family: 'Montserrat', 'Verdana', sans-serif;
+}
+
+#half1 {
+	width: 50%;
+	padding-left: 5%;
+	float:left;
+}
+#half1 p {
+	width: 38.5vh;
+}
+#phonecontainer {
+	width: 40%;
+	float:left;
+	padding: 0px;
+	position: relative;
+}
+img#phone {
+	position: absolute;
+	width: 20vw;
+	z-index: 1;
+}
+#messageholder {
+	z-index: 10;
+	width: 17.6vw;
+	position: absolute;
+	top: 30vh;
+	padding-left: 1.2vw;
+	padding-right: 1.2vw;
+}
+#sendholder {
+	z-index: 10;
+	width: 17.6vw;
+	position: absolute;
+	top: 70vh;
+	padding-left: 1.2vw;
+	padding-right: 1.2vw;
+}
+.smessages {
+	border-radius: 10px 10px 10px 0px;
+	background-color: rgb(104, 173, 98);
+	max-width: 10vw;
+	padding: 10px;
+	margin:0px 0px 10px 0px;
+	float: left;
+}
+.fmessages {
+	border-radius: 10px 10px 0px 10px;
+	background-color: rgb(197, 197, 197);
+	max-width: 10vw;
+	padding: 10px;
+	margin:0px 0px 10px 0px;
+	float: right;
+}
+.readytosend {
+	animation:  pulse 0.7s infinite;
+	cursor: pointer;
+}
+@keyframes pulse {
+	0% {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+	60% {
+	  transform: scale(1.02);
+	  opacity: 0.9;
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }

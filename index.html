@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>First Custom PC?</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#paged').hide();
+            $('#paged').slideDown(1100);
+            $('p').fadeIn(1100);
+            $('#enterb').mouseenter(function() {
+                $(this).addClass('beat');
+            });
+            $('#enterb').mouseleave(function() {
+                $(this).removeClass('beat');
+            });
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+    </style>
+</head>
+<body id="landing">
+    <div id="topbanner">
+        <p>Created by Taesung Jung | MMCC2041 Major Project</p>
+    </div>
+    <div id="paged">
+        <p>When I ask people why they went with a custom PC over a prebuilt one, the most important factor is usually the degree of customizability that is available. It’s important to consider that this can be a double edged sword – and improperly configured system may lead to you spending additional hundreds of dollars unnecessarily. It can be tempting to find the flashiest models of each component, but unless you have an unlimited budget, you’re going to be taking from every other part of the system for every dollar you spend. </p><br><hr><br><p>On this webpage I’ll be writing up some information I feel could be useful to a new PC builder – however this is only designed to be supplementary knowledge, so make sure to do additional research on the fundamentals!</p>
+    </div>
+    <a href="parts.html" id="enterb">Enter >></a>
+</body>
+</html>
