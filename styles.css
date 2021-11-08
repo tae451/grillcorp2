@@ -1,6 +1,7 @@
 body {
 	font-family:'Trebuchet MS', Tahoma, Geneva, Verdana, sans-serif;
 	margin: 0px;
+	overflow-y: scroll;
 }
 #main {
 	margin-left: auto;
@@ -34,7 +35,7 @@ body {
 	display: block;
 }
 #content p {
-	width: 77vh;
+	max-width: 77vh;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -98,12 +99,13 @@ nav {
 	height: 100vh;
 	padding: 0px;
 	padding: 0px 30px 0px 30px;
-	font-size: 08;
+	font-size: 0.85vw;
 	background-color: #e6e3ff;
 	color: #352f2f;
 }
 #content h1{
 	margin: 0px;
+	padding: 0px;
 	text-align: center;
 	font-size: 4vh;
 	font-family: 'Montserrat', 'Verdana', sans-serif;
